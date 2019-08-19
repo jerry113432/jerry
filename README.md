@@ -6,7 +6,7 @@
 
 ##成果展示
 
-![](https://github.com/jerry113432/jerry/raw/master/88888.png.lnk)
+![](https://github.com/grand-coder/jerry113432/jerry/raw/master/88888.png.lnk)
 
 ## 使用技術
 
