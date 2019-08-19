@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Jerry</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">首頁</a></li>
+          <li><a href="#">我的最愛</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="col-md-4">
+        <img class="img-responsive img-circle" src="/static/fish.gif">
+      </div>
+      <div class="col-md-8">
+        <h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 自我介紹</h2>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>欄位</th>
+                <th>內容</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>姓名</td>
+                <td>Jerry</td>
+              </tr>
+              <tr>
+                <td>身高</td>
+                <td>175</td>
+              </tr>
+              <tr>
+                <td>體重</td>
+                <td>75</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="col-md-8 col-md-offset-2">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="danger">分類</th>
+                <th class="success">篇數</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for cat in d %}
+              <tr>
+                <td>{{cat[0]}}</td>
+                <td><a href="/category/{{cat[0]}}">{{cat[1]}}</a></td>
+              </tr>
+              {% endfor %}
+
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </body>
+</html>
